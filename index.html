@@ -49,6 +49,27 @@
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            text-align: center;
+        }
+
+        .buku-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .buku {
+            width: 200px;
+            text-align: center;
+        }
+
+        .buku img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -74,8 +95,22 @@
 
 <div class="rekomendasi fade-in">
     <h3>Rekomendasi Buku</h3>
-    <p>Download daftar rekomendasi buku dalam format ZIP:</p>
-    <a href="rekomendasi_buku.zip" download>Unduh Rekomendasi Buku</a>
+    <p>Download daftar rekomendasi buku dari Google Drive:</p>
+    <a href="https://drive.google.com/your-drive-link" target="_blank">Unduh Rekomendasi Buku</a>
+    <div class="buku-container">
+        <div class="buku">
+            <img src="https://via.placeholder.com/150" alt="Buku 1">
+            <p>Judul Buku 1</p>
+        </div>
+        <div class="buku">
+            <img src="https://via.placeholder.com/150" alt="Buku 2">
+            <p>Judul Buku 2</p>
+        </div>
+        <div class="buku">
+            <img src="https://via.placeholder.com/150" alt="Buku 3">
+            <p>Judul Buku 3</p>
+        </div>
+    </div>
 </div>
 
 <footer>
