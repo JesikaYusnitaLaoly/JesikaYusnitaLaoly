@@ -1,90 +1,142 @@
-<html>
-    <header>
-   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Logo_of_North_Sumatra_University.svg/800px-Logo_of_North_Sumatra_University.svg.png" alt="Logo Website" width="50px" height="500px" />
-   <h1>Perpustakaan Jesika Yusnita Laoly</h1>
-<nav>
-<ul>
-         <li><a href="index.html">Homepage</a></li>
-         <li><a href="About.html">About</a></li>
-	 <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-  </div>
-</ul>
-</nav>
-</header>
-	
-<body>
-    <head></head><title>About Me</title>
-    </head>
-<body>
-    <h1>About Me</h1>
-<p>Biodata</p>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        header {
+            background-color: #00BFFF;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            animation: slideDown 1s ease-out;
+        }
 
-<table border="1" cellpadding="10" cellspacing="0">
-    
+        @keyframes slideDown {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        header nav ul li a:hover {
+            color: #FFD700;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #00BFFF;
+            color: white;
+        }
+
+        footer {
+            background-color: #00BFFF;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Logo_of_North_Sumatra_University.svg/800px-Logo_of_North_Sumatra_University.svg.png" alt="Logo Website">
+    <h1>Perpustakaan Jesika Yusnita Laoly</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h1 class="fade-in">About Me</h1>
+<p class="fade-in">Biodata</p>
+
+<table class="fade-in">
     <tr>
         <td>Nama</td>
         <td>Jesika Yusnita Laoly</td>
     </tr>
-
     <tr>
         <td>NIM</td>
         <td>220709064</td>
     </tr>
-
     <tr>
         <td>Jurusan</td>
         <td>Perpustakaan dan Sains Informasi</td>
     </tr>
-
     <tr>
         <td>Fakultas</td>
         <td>Ilmu Budaya</td>
     </tr>
-
     <tr>
         <td>Perguruan Tinggi</td>
         <td>Universitas Sumatera Utara</td>
     </tr>
-
     <tr>
         <td>E-mail</td>
         <td>jesikalaolay19@gmail.com</td>
     </tr>
 </table>
-	<style>
-header {
-   background-color: 00BFFF;
-   color: white;
-   padding: 20px 10px;
-   text-align: center;
-}
 
-header img {
-   height: 50px;
-}
+<footer>
+    <p>&copy; 2025 All rights reserved</p>
+</footer>
 
-header nav ul li {
-   display: inline;
-   margin: 0 10px;
-}
-
-header nav ul li a {
-   color: white;
-   text-decoration: none;
-}
-</style>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let elements = document.querySelectorAll(".fade-in");
+        elements.forEach((element, index) => {
+            setTimeout(() => {
+                element.classList.add("visible");
+            }, index * 300);
+        });
+    });
+</script>
 </body>
 </html>
-<footer>
-  <p>&copy; 2025 All rights reserved</p>
-</footer>
-<style>
-footer {
-   background-color: 00BFFF;
-   color: white;
-   padding: 20px 10px;
-   text-align: center;
-}
-</style>
