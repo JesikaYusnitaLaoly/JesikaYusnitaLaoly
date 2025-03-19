@@ -57,22 +57,6 @@ footer {
    text-align: center;
 }
 </style>
-<script>
-        const books = [
-            { title: "You Are a Badass", author: "Jen Sincero", image: "https://m.media-amazon.com/images/I/81Yq0zLfcnL.jpg", link: "#" },
-            { title: "How to Win Friends and Influence People", author: "Dale Carnegie", image: "https://m.media-amazon.com/images/I/71RliLJ8Z0L.jpg", link: "#" },
-            { title: "The Gifts of Imperfection", author: "Brené Brown", image: "https://m.media-amazon.com/images/I/81R7c9cJD-L.jpg", link: "#" },
-            { title: "You Can Heal Your Life", author: "Louise Hay", image: "https://m.media-amazon.com/images/I/81a4kCNuH+L.jpg", link: "#" },
-            { title: "Grit: The Power of Passion and Perseverance", author: "Angela Duckworth", image: "https://m.media-amazon.com/images/I/71aG+xDKSYL.jpg", link: "#" }
-        ];
 
-        const bookList = document.getElementById("book-list");
-        books.forEach(book => {
-            const bookDiv = document.createElement("div");
-            bookDiv.classList.add("book");
-            bookDiv.innerHTML = `<img src="${book.image}" alt="${book.title}"><h3>${book.title}</h3><p>Oleh: ${book.author}</p><a href="${book.link}" target="_blank">Unduh PDF</a>`;
-            bookList.appendChild(bookDiv);
-        });
-    </script>
 </body>
 </html>
