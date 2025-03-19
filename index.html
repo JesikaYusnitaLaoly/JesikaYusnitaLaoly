@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perpustakaan Jesika Yusnita Laoly</title>
     <style>
+        /* HEADER */
         header {
             background-color: #00BFFF;
             color: white;
@@ -22,6 +23,11 @@
             height: 50px;
         }
 
+        header nav ul {
+            padding: 0;
+            list-style: none;
+        }
+
         header nav ul li {
             display: inline;
             margin: 0 10px;
@@ -30,6 +36,7 @@
         header nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: bold;
             transition: color 0.3s ease-in-out;
         }
 
@@ -37,6 +44,7 @@
             color: #FFD700;
         }
 
+        /* ANIMASI FADE-IN */
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -48,17 +56,30 @@
             transform: translateY(0);
         }
 
-        footer {
-            background-color: #00BFFF;
-            color: white;
-            padding: 20px 10px;
+        /* SECTION "TENTANG SAYA" */
+        .about {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            animation: fadeIn 2s ease-in;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .about h2 {
+            color: #00BFFF;
+        }
+
+        .about p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* REKOMENDASI BUKU */
+        .rekomendasi {
+            text-align: center;
+            padding: 20px;
         }
 
         .buku-container {
@@ -70,25 +91,65 @@
         }
 
         .buku {
-            width: 200px;
+            width: 220px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
             text-align: center;
-            transform: scale(1);
             transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
         .buku:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .buku img {
             width: 100%;
             height: auto;
             border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .buku p {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .buku a {
+            display: block;
+            margin-top: 5px;
+            padding: 8px;
+            background: #00BFFF;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .buku a:hover {
+            background: #005f9e;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #00BFFF;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
 <body>
+
 <header>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Logo_of_North_Sumatra_University.svg/800px-Logo_of_North_Sumatra_University.svg.png" alt="Logo Website">
     <h1>Perpustakaan Jesika Yusnita Laoly</h1>
@@ -101,10 +162,18 @@
     </nav>
 </header>
 
+<!-- TENTANG SAYA -->
+<div class="about fade-in">
+    <h2>Tentang Saya</h2>
+    <p>Selamat datang di perpustakaan digital saya! Website ini adalah tempat saya mengarsipkan berbagai koleksi tulisan, artikel, dan referensi yang bermanfaat bagi siapa saja yang mencintai ilmu dan wawasan baru.</p>
+</div>
+
+<!-- REKOMENDASI BUKU -->
 <div class="rekomendasi fade-in">
     <h3>Rekomendasi Buku</h3>
     <a href="https://drive.google.com/drive/folders/1Clz0Bf6-u4Am90oi_FWoLu4WVMCM-fo_" target="_blank">Unduh Rekomendasi Buku</a>
-   <div class="buku-container">
+    
+    <div class="buku-container">
         <div class="buku">
             <img src="https://i.imgur.com/x3IigYG.jpg" alt="Buku 1">
             <p>Know Can Do!: Put Your Know-How Into Action</p>
@@ -137,5 +206,6 @@
         });
     });
 </script>
+
 </body>
 </html>
