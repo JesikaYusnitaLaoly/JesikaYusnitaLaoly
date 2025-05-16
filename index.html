@@ -538,6 +538,58 @@
         menu.classList.toggle("show");
     }
 </script>
+    <h1 id="welcomeMessage">Selamat datang!</h1>
+  <input type="text" id="nama" placeholder="Nama Anda">
+  <button onclick="simpanNama()">Simpan</button>
+  <button onclick="hapusCookie()">Hapus Cookie</button>
+
+  <script>
+    function setCookie(nama, nilai, hari) {
+      const d = new Date();
+      d.setTime(d.getTime() + (hari*24*60*60*1000));
+      const expires = "expires=" + d.toUTCString();
+      document.cookie = nama + "=" + nilai + ";" + expires + ";path=/";
+    }
+
+    function getCookie(nama) {
+      const namaCookie = nama + "=";
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const ca = decodedCookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(namaCookie) === 0) {
+          return c.substring(namaCookie.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function tampilkanPesan() {
+      const nama = getCookie("namaPengguna");
+      if (nama !== "") {
+        document.getElementById("welcomeMessage").textContent = "Selamat datang, " + nama + "!";
+      }
+    }
+
+    function simpanNama() {
+      const nama = document.getElementById("nama").value;
+      if (nama !== "") {
+        setCookie("namaPengguna", nama, 7);
+        tampilkanPesan();
+      }
+    }
+
+    function hapusCookie() {
+      setCookie("namaPengguna", "", -1);
+      document.getElementById("welcomeMessage").textContent = "Selamat datang!";
+      document.getElementById("nama").value = "";
+    }
+
+    tampilkanPesan();
+  </script>
 
 </body>
 </html>
